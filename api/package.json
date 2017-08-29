@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Super lock API",
+  "main": "index.js",
+  "author": "Blake Guilloud",
+  "license": "MIT",
+  "scripts": {
+    "mock:createUser": "SLS_DEBUG=true serverless invoke local --function createUser -p mocks/user/create.json",
+    "mock:updateUser": "SLS_DEBUG=true serverless invoke local --function updateUser -p mocks/user/update.json",
+    "mock:fetchUserById": "SLS_DEBUG=true serverless invoke local --function fetchUserById -p mocks/user/fetchById.json",
+    "mock:fetchUsers": "SLS_DEBUG=true serverless invoke local --function fetchUsers",
+    "mock:destroyUser": "SLS_DEBUG=true serverless invoke local --function destroyUser -p mocks/user/destroy.json",
+    "mock:createSheet": "SLS_DEBUG=true serverless invoke local --function createSheet -p mocks/sheet/create.json",
+    "mock:fetchSheetById": "SLS_DEBUG=true serverless invoke local --function fetchSheetById -p mocks/sheet/fetchById.json",
+    "mock:fetchSheets": "SLS_DEBUG=true serverless invoke local --function fetchSheets",
+    "mock:destroySheet": "SLS_DEBUG=true serverless invoke local --function destroySheet -p mocks/sheet/destroy.json",
+    "mock:updateSheet": "SLS_DEBUG=true serverless invoke local --function updateSheet -p mocks/sheet/update.json"
+  },
+  "dependencies": {
+    "mongoose": "^4.11.9"
+  }
+}
